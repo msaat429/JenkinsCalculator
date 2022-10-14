@@ -39,6 +39,20 @@ class Calculator {
     etc
      */
     int fibonacciNumberFinder(int n){
+
+        if (n > 0) {
+            int fib = 1;
+            int last = 0;
+
+            for (int i = 1; i < n; i++) {
+                int temp = fib;
+                fib = fib + last;
+                last = temp;
+            }
+
+            return fib;
+        }
+
         return 0;
     }
 
